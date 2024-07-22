@@ -1,28 +1,10 @@
 # Hospital Triage System
 
-## Overview
-
-The Hospital Triage System is a web application designed to help staff and patients understand emergency room wait times. The application provides two interfaces:
-1. **Patient Interface**: Allows patients to check their approximate wait time using their name and 3-letter code.
-2. **Admin Dashboard**: Allows administrators to view a full list of patients with their wait times and codes.
-
-## Project Structure
-
-- `./client/`: Contains front-end code for the patient and admin interfaces.
-  - `index.html`: Homepage with navigation to patient and admin interfaces.
-  - `patient.html`: Patient interface for checking wait times.
-  - `admin.html`: Admin dashboard for viewing patient list.
-  - `styles.css`: Styles for the patient interface.
-  - `admin.css`: Styles for the admin dashboard.
-  - `app.js`: JavaScript for handling patient interface interactions.
-  - `admin.js`: JavaScript for handling admin dashboard interactions.
-
-- `./public/`: Contains back-end code and database interaction scripts.
-  - `db.php`: Database connection configuration.
-  - `patient.php`: PHP script for handling patient wait time requests.
-  - `admin.php`: PHP script for fetching the list of patients.
-
 ## Setup and Running Locally
+
+**Dependencies**
+- php
+- pgAdmin4
 
 1. **Clone the Repository**: 
    ```bash
@@ -32,6 +14,8 @@ The Hospital Triage System is a web application designed to help staff and patie
 2. **Create the Database**:
    - Open the `pgAdmin` tool or use the PostgreSQL command line.
    - Create a new database named `emergency_waitlist`.
+   - Use username `postgres`
+   - Use password `pass1234`
 
 3. **Configure the Database Schema**:
    - Use the following SQL commands to set up the database schema:
@@ -85,7 +69,33 @@ The Hospital Triage System is a web application designed to help staff and patie
      INSERT INTO patients (name, code, severity, wait_time) VALUES ('Hank Wilson', 'HW0', 2, 40);
      INSERT INTO wait_times (patient_id, time_in_queue, severity) VALUES (10, 40, 2);
      ```
-    
+5. **Run The Application**
+    - Open cmd in the root directory of the assignment
+    - Type: `php -S localhost:4000`
+    - Open your browse and navigate to `http://localhost:4000/client/index.html`
+
+## Overview
+
+The Hospital Triage System is a web application designed to help staff and patients understand emergency room wait times. The application provides two interfaces:
+1. **Patient Interface**: Allows patients to check their approximate wait time using their name and 3-letter code.
+2. **Admin Dashboard**: Allows administrators to view a full list of patients with their wait times and codes.
+
+## Project Structure
+
+- `./client/`: Contains front-end code for the patient and admin interfaces.
+  - `index.html`: Homepage with navigation to patient and admin interfaces.
+  - `patient.html`: Patient interface for checking wait times.
+  - `admin.html`: Admin dashboard for viewing patient list.
+  - `styles.css`: Styles for the patient interface.
+  - `admin.css`: Styles for the admin dashboard.
+  - `app.js`: JavaScript for handling patient interface interactions.
+  - `admin.js`: JavaScript for handling admin dashboard interactions.
+
+- `./public/`: Contains back-end code and database interaction scripts.
+  - `db.php`: Database connection configuration.
+  - `patient.php`: PHP script for handling patient wait time requests.
+  - `admin.php`: PHP script for fetching the list of patients.
+
 ## User Documentation
 
 ### Patient Interface
