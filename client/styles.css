@@ -13,6 +13,12 @@ h1 {
     color: #4CAF50;
 }
 
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    color: #4CAF50;
+}
+
 form {
     max-width: 600px;
     margin: 20px auto;
@@ -55,7 +61,6 @@ button:hover {
     margin-top: 20px;
 }
 
-/* Button Styles */
 .button-container {
     text-align: center;
     margin-top: 20px;
@@ -73,4 +78,13 @@ button:hover {
 
 .btn:hover {
     background-color: #45a049;
+}
+
+.centered {
+    display: block;
+    text-align: center;
+}
+
+.centered-block {
+    display: block;
 }

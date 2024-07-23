@@ -13,9 +13,9 @@
 
 2. **Create the Database**:
    - Open the `pgAdmin` tool or use the PostgreSQL command line.
-   - Create a new database named `emergency_waitlist`.
-   - Use username `postgres`
-   - Use password `pass1234`
+   - Create a new database and `name` it, remember the `name` for later
+   - Set the database `user`, remember the `user` for later
+   - Set the database `password`, remember the `password` for later
 
 3. **Configure the Database Schema**:
    - Use the following SQL commands to set up the database schema:
@@ -73,6 +73,13 @@
     - Open cmd in the root directory of the assignment
     - Type: `php -S localhost:4000`
     - Open your browse and navigate to `http://localhost:4000/client/index.html`
+
+6. **Configure The Database**
+    -On the Home page, navigate to the form
+    -For `Database Name`, use the same `name` you named your database in Step 2.
+    -For `Database User`, use the same `user` you named your database in Step 2.
+    -For `Database Password`, use the same `password` you named your database in Step 2.
+    -Click the `Save Configuration` button.
 
 ## Overview
 

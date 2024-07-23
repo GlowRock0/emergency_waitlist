@@ -12,5 +12,19 @@
         <a href="admin.html" class="btn">Admin Dashboard</a>
         <a href="patient.html" class="btn">Patient Dashboard</a>
     </div>
+    <div class="db-config">
+        <h2>Database Configuration</h2>
+        <form id="dbConfigForm">
+            <label for="dbname">Database Name:</label>
+            <input type="text" placeholder="emergency_waitlist" id="dbname" name="dbname" required>
+            <label for="dbuser">Database User:</label>
+            <input type="text" placeholder="postgres" id="dbuser" name="dbuser" required>
+            <label for="dbpass">Database Password:</label>
+            <input type="password" placeholder="pass1234" id="dbpass" name="dbpass" required>
+            <button type="submit">Save Configuration</button>
+        </form>
+        <div class="centered" id="configStatus"></div>
+    </div>
 </body>
+<script src="app.js"></script>
 </html>

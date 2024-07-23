@@ -1,8 +1,11 @@
 <?php
+
+session_start();
+
 $host = 'localhost'; // or your server address
-$db = 'emergency_waitlist';
-$user = 'postgres';
-$pass = 'pass1234';
+$db = $_SESSION['dbname'] ?? 'emergency_waitlist';
+$user = $_SESSION['dbuser'] ?? 'postgres';
+$pass = $_SESSION['dbpass'] ?? 'pass1234';
 $dsn = "pgsql:host=$host;port=5432;dbname=$db;";
 
 try {
